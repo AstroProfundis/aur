@@ -1,0 +1,6 @@
+scp-sync/
+*/src/
+*/pkg/
+*.xz
+*.gz
+*.zip
