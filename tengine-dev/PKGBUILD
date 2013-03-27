@@ -1,7 +1,7 @@
 # $Id$
 # Maintainer: Allen Zhong <moeallenz@gmail.com>
-# Contributor:  Sergej Pupykin <pupykin.s+arch@gmail.com>
-# Contributor:  Bartłomiej Piotrowski <nospam@bpiotrowski.pl>
+# Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: Bartłomiej Piotrowski <nospam@bpiotrowski.pl>
 # Contributor: Miroslaw Szot <mss@czlug.icis.pcz.pl>
 
 _cfgdir=/etc/tengine
