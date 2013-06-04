@@ -8,7 +8,7 @@
 pkgname=bind-rl
 _pkgver=9.9.3
 pkgver=9.9.3
-pkgrel=1
+pkgrel=2
 pkgdesc='The ISC BIND nameserver with Response Rate Limiting(RRL) patch.'
 url='http://www.isc.org/software/bind/'
 license=('custom:ISC')
@@ -43,7 +43,7 @@ prepare() {
 	cd "${srcdir}"
 	patch -s -p0 -d bind-${_pkgver} < rl-${_pkgver}.patch
 	# remove dig to avoid conflict with dnsutils
-	sed -i 's/dig//' ${pkgname}-${_pkgver}/bin/Makefile.in
+	sed -i 's/dig//' bind-${_pkgver}/bin/Makefile.in
 }
 
 build() {
