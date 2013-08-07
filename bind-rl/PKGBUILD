@@ -6,9 +6,9 @@
 # Contributor: Mario Vazquez <mario_vazq@hotmail.com>
 
 pkgname=bind-rl
-_pkgver=9.9.3
-pkgver=9.9.3
-pkgrel=2
+_pkgver=9.9.3-P2
+pkgver=9.9.3.P2
+pkgrel=1
 pkgdesc='The ISC BIND nameserver with Response Rate Limiting(RRL) patch.'
 url='http://www.isc.org/software/bind/'
 license=('custom:ISC')
@@ -29,9 +29,9 @@ source=("http://ftp.isc.org/isc/bind9/${_pkgver}/bind-${_pkgver}.tar.gz"
         'named.logrotate'
         'localhost.zone'
         '127.0.0.zone')
-sha1sums=('0d770a68ccdb98db7930951cf380d5c7ed9b5b67'
+sha1sums=('a0235692c488b3fadf54a15858b1f13ae2ab6979'
           '029f89c49550c40ec7a95116b6a33f0e5a041094'
-          'a73a4f4ac782ac8c45f212a26f80768f4a193e81'
+          'a5e257692d0889c3cf45ea404882023e1b5cd689'
           'c5a2bcd9b0f009ae71f3a03fbdbe012196962a11'
           'c71a7fc02d4bf0d55e8e29d1e014607ac1d58726'
           'cb2e81b4cbf9efafb3e81e3752f0154e779cc7ec'
@@ -80,7 +80,7 @@ package() {
 	install -D -m600 named.logrotate "${pkgdir}"/etc/logrotate.d/named
 	install -D -m640 -o 0 -g 40 named.conf "${pkgdir}"/etc/named.conf
 
-	install -d -m750 -o 0 -g 40 "${pkgdir}"/var/named
+	install -d -m770 -o 0 -g 40 "${pkgdir}"/var/named
 	install    -m640 -o 0 -g 40 root.hint "${pkgdir}"/var/named
 	install    -m640 -o 0 -g 40 127.0.0.zone "${pkgdir}"/var/named
 	install    -m640 -o 0 -g 40 localhost.zone "${pkgdir}"/var/named
