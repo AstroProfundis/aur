@@ -8,7 +8,7 @@
 pkgname=bind-rl
 _pkgname=bind
 _pkgver=9.9.4-P1
-pkgver=${_pkgver//-/.}
+pkgver=9.9.4.P1
 pkgrel=1
 pkgdesc='The ISC BIND nameserver with Response Rate Limiting(RRL) enabled.'
 url='http://www.isc.org/software/bind/'
