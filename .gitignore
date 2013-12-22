@@ -5,4 +5,5 @@ test/
 *.xz
 *.gz
 *.zip
-bind-rl/rl*.patch
+*.asc
+cookies
