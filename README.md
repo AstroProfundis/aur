@@ -8,5 +8,5 @@ These are the packages I'm currently maintaining on `AUR` (Arch User Repository)
 * `mod_remoteip`: A backport of [`mod_remoteip`](http://httpd.apache.org/docs/current/mod/mod_remoteip.html) in apache httpd 2.4.x
 * `nginx-accesskey`: Lightweight HTTP server and IMAP/POP3 proxy server, with [`ngx_http_accesskey_module`](http://wiki.nginx.org/HttpAccessKeyModule).
 * `nginx-tcp`: Lightweight HTTP server and IMAP/POP3 proxy server, with [`nginx_tcp_proxy_module`](https://github.com/yaoweibin/nginx_tcp_proxy_module).
-* `tengine-dev`: A web server based on Nginx and has many advanced features, originated by Taobao.
+* `tengine` & `tengine-dev`: A web server based on Nginx and has many advanced features, originated by Taobao.
 
