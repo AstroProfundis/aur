@@ -5,10 +5,9 @@
 # Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
 # Contributor: Miroslaw Szot <mss@czlug.icis.pcz.pl>
 
-pkgname=tengine-dev
-_pkgname=tengine
-pkgver=1.5.1
-pkgrel=2
+pkgname=tengine
+pkgver=1.5.2
+pkgrel=1
 pkgdesc='A web server based on Nginx and has many advanced features, originated by Taobao.'
 arch=('i686' 'x86_64')
 url='http://tengine.taobao.org'
@@ -19,21 +18,22 @@ backup=('etc/tengine/fastcgi.conf'
         'etc/tengine/koi-win'
         'etc/tengine/koi-utf'
         'etc/tengine/mime.types'
-        'etc/tengine/nginx.conf'
+        'etc/tengine/tengine.conf'
         'etc/tengine/scgi_params'
         'etc/tengine/uwsgi_params'
         'etc/tengine/win-utf'
         'etc/logrotate.d/tengine')
 install=install
+conflicts=('tengine-dev')
 source=("http://tengine.taobao.org/download/tengine-$pkgver.tar.gz"
         'service'
         'logrotate')
-sha256sums=('a8f5c17cc6f7bf8973ac9a3b9c0605e3b57d1079b656395862a716d03ab0a25c'
+sha256sums=('563c2504423add9f7c7c1968d52f6337a3652cb463207b69f8e0a9efb86b449d'
             '622205fb90998de2ebacac61c8eee748f89c193d14be44ee39e08ae1e257c90f'
             '245c23906db2a9642fed996ff969e127989a6dcae865c1dd8b422e23ebc94f42')
 
 build() {
-    cd "$srcdir"/$_pkgname-$pkgver
+    cd $pkgname-$pkgver
 
     ./configure \
         --prefix=/etc/tengine \
@@ -71,7 +71,7 @@ build() {
 }
 
 package() {
-    cd $_pkgname-$pkgver
+    cd $pkgname-$pkgver
     make DESTDIR="$pkgdir" install
 
     sed -e 's|\<user\s\+\w\+;|user html;|g' \
