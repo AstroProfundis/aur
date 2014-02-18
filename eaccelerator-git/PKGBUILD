@@ -1,8 +1,8 @@
 # Maintainer: Allen Zhong <moeallenz@gmail.com>
 
 pkgname=eaccelerator-git
-pkgver=1.0
-pkgrel=3
+pkgver=r373.42067ac
+pkgrel=1
 pkgdesc="A free open-source PHP accelerator, optimizer, and dynamic content cache."
 arch=('i686' 'x86_64')
 url="http://eaccelerator.net/"
@@ -10,22 +10,18 @@ license=('GPL')
 depends=('php')
 makedepends=('git')
 conflicts=('xcache' 'turck-mmcache' 'phpexpress' 'eaccelerator' 'eaccelerator-svn')
-source=(php55.patch)
-md5sums=('92252bee98df6cbc468231f6f0a3184c')
+source=($pkgname::git+https://github.com/eaccelerator/eaccelerator.git
+        php55.patch)
+md5sums=('SKIP'
+         '92252bee98df6cbc468231f6f0a3184c')
+
+pkgver() {
+  cd $srcdir/$pkgname
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
 
 prepare() {
-  msg "Connecting to GIT server..."
-    cd $srcdir
-    if [ -d $pkgname ]; then
-      cd $pkgname
-      git pull https://github.com/eaccelerator/eaccelerator.git
-      msg "The local files are updated."
-    else
-      git clone --depth=1 https://github.com/eaccelerator/eaccelerator.git $pkgname
-      cd $pkgname
-    fi
-  msg "GIT checkout done or server timeout"
-
+  cd $srcdir/$pkgname
   msg "Patching for PHP 5.5..."
     patch -s -p0 -i ../php55.patch eaccelerator.c
   msg "Patch finished."
