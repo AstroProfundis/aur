@@ -19,7 +19,7 @@ These are the packages I'm currently maintaining on `AUR` (Arch User Repository)
 Repository
 ======
 
-I also provide a binary repository than includes all my AUR packages, It's now `x86_64` only.
+I also provide a binary repository than includes all my AUR packages, It now have both `i686` and `x86_64` arch.
 
 To use this `aspro` repo, add these to the end of your `/etc/pacman.conf` file:
 
