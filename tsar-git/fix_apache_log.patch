@@ -1,0 +1,11 @@
+--- a/include/public.h	2014-05-07 16:59:44.000000000 +0800
++++ b/include/public.h	2014-05-08 11:23:51.000000000 +0800
+@@ -35,7 +35,7 @@
+ #define MEMINFO "/proc/meminfo"
+ #define LOADAVG "/proc/loadavg"
+ #define INTERRUPT "/proc/interrupts"
+-#define APACHERT "/tmp/apachert.mmap"
++#define APACHERT "/var/log/httpd/apachert.mmap"
+ #define VMSTAT "/proc/vmstat"
+ #define DISKSTATS "/proc/diskstats"
+ #define NET_SNMP "/proc/net/snmp"
