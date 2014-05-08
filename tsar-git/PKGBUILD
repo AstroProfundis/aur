@@ -4,21 +4,20 @@
 pkgname=tsar-git
 _gitname=tsar
 pkgver=0.121.3c54b6e
-pkgrel=2
+pkgrel=3
 pkgdesc="Taobao System Activity Reporter"
 arch=('i686' 'x86_64')
 url="http://tsar.taobao.org/"
 license=('Apache')
 depends=('glibc')
 makedepends=('git')
-backup=('etc/tsar/tsar.conf'
-	'var/log/tsar.data')
+backup=('etc/tsar/tsar.conf')
 source=("git://github.com/alibaba/$_gitname.git"
 	"fix_module_path.patch"
 	"fix_apache_log.patch")
 md5sums=('SKIP'
 	 '2ddf971bbdaac82fdfbe1610a420a940'
-         'a26d9075778ed636cb5b48092979bb3e')
+         '17c3aab670c1793d867db545548a2a79')
 
 pkgver() {
   cd "$srcdir/$_gitname"
@@ -39,9 +38,6 @@ package() {
   cp modules/*.so "$pkgdir"/usr/lib/tsar/modules/
   
   install -Dm755 src/tsar "$pkgdir"/usr/bin/tsar
-
-  install -d "$pkgdir"/var/log
-  touch "$pkgdir"/var/log/tsar.data
 
   install -Dm644 conf/tsar.conf "$pkgdir"/etc/tsar/tsar.conf
   install -Dm644 conf/tsar.logrotate "$pkgdir"/etc/logrotate.d/tsar
