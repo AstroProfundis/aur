@@ -21,14 +21,4 @@ Repository
 
 I also provide a binary repository than includes all my AUR packages, It now have both `i686` and `x86_64` arch.
 
-To use this `aspro` repo, add these to the end of your `/etc/pacman.conf` file:
-
-    [aspro]
-    SigLevel = TrustAll
-    Server = http://fun.atr.me/archlinux/$arch
-
-And you may need to sign my key, otherwise you'll have to set `SigLevel = Never`:
-
-    sudo pacman-key --lsign-key BB01E61B
-
-Read more about `pacman-key` on [wiki](https://wiki.archlinux.org/index.php/Pacman-key).
+To use this `aspro` repo, see instructions [here](https://github.com/AstroProfundis/abs-build).
