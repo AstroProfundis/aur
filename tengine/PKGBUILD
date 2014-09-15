@@ -7,7 +7,7 @@
 
 pkgname=tengine
 pkgver=2.0.3
-pkgrel=4
+pkgrel=5
 pkgdesc='A web server based on Nginx and has many advanced features, originated by Taobao.'
 arch=('i686' 'x86_64')
 url='http://tengine.taobao.org'
