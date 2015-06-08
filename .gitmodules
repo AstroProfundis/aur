@@ -1,0 +1,39 @@
+[submodule "asar-apache"]
+	path = asar-apache
+	url = ssh+git://aur@aur4.archlinux.org/asar-apache.git/
+[submodule "bind-rl"]
+	path = bind-rl
+	url = ssh+git://aur@aur4.archlinux.org/bind-rl.git/
+[submodule "lib32-gperftools"]
+	path = lib32-gperftools
+	url = ssh+git://aur@aur4.archlinux.org/lib32-gperftools.git/
+[submodule "mod_python"]
+	path = mod_python
+	url = ssh+git://aur@aur4.archlinux.org/mod_python.git/
+[submodule "mod_fcgid-legacy"]
+	path = mod_fcgid-legacy
+	url = ssh+git://aur@aur4.archlinux.org/mod_fcgid-legacy.git/
+[submodule "mod_python2"]
+	path = mod_python2
+	url = ssh+git://aur@aur4.archlinux.org/mod_python2.git/
+[submodule "mod_python2-legacy"]
+	path = mod_python2-legacy
+	url = ssh+git://aur@aur4.archlinux.org/mod_python2-legacy.git/
+[submodule "nginx-accesskey"]
+	path = nginx-accesskey
+	url = ssh+git://aur@aur4.archlinux.org/nginx-accesskey.git/
+[submodule "nginx-tcp"]
+	path = nginx-tcp
+	url = ssh+git://aur@aur4.archlinux.org/nginx-tcp.git/
+[submodule "rtorrent-ipv6"]
+	path = rtorrent-ipv6
+	url = ssh+git://aur@aur4.archlinux.org/rtorrent-ipv6.git/
+[submodule "tengine"]
+	path = tengine
+	url = ssh+git://aur@aur4.archlinux.org/tengine.git/
+[submodule "tengine-extra"]
+	path = tengine-extra
+	url = ssh+git://aur@aur4.archlinux.org/tengine-extra.git/
+[submodule "tsar-git"]
+	path = tsar-git
+	url = ssh+git://aur@aur4.archlinux.org/tsar-git.git/
